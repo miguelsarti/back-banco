@@ -1,7 +1,8 @@
-import Prisma from "../../prisma/client.js"
+import prisma from "../../prisma/client.js"
+
 class TarefaModel {
   getAll = async () => {
-    return await prisma.tarefa.findMany();
+    return await prisma.task.findMany();
   }
   create = (descricao) => {
     const novaTarefa = {
